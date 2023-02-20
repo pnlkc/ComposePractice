@@ -1,5 +1,5 @@
 # ComposePractice
-안드로이드 Jetpack Compose를 연습하기 위한 프로젝트 입니다
+안드로이드 Jetpack Compose를 연습하기 위한 프로젝트 입니다  
 구글의 강의(https://developer.android.com/courses/android-basics-compose/course?hl=ko)를 공부하였습니다
 
 ### 공부한 내용
