@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">색상의 의미</string>
+    <string name="color1">색상1</string>
+    <string name="color2">색상2</string>
+    <string name="color3">색상3</string>
+    <string name="color4">색상4</string>
+    <string name="color5">색상5</string>
+    <string name="color6">색상6</string>
+    <string name="color1_name">빨강</string>
+    <string name="color2_name">주황</string>
+    <string name="color3_name">노랑</string>
+    <string name="color4_name">초록</string>
+    <string name="color5_name">파랑</string>
+    <string name="color6_name">보라</string>
+    <string name="color1_description">빨강은 긍정적이면서도 동시에 부정적인 연상 작용을 일으키는 매우 강렬한 색입니다. 힘, 열정, 자신감을 상징하는 빨강은 공격적이며 분노, 경고 또는 위험을 상징하기도 합니다. 빨간색의 이러한 두 측면을 고려하여 적절하게 사용하면 빨강이 가진 강렬한 의미를 유리하게 활용할 수 있습니다.</string>
+    <string name="color2_description">주황은 밝고 에너지 넘치는 색입니다. 힘이 넘치고, 즐겁고 따뜻한 느낌을 주는 주황은 시선을 사로잡거나 특정 메시지를 전달할 때 많이 사용됩니다. 기술 기업 브랜드에 주황색이 많이 사용되는 이유는 기술 스타트업으로 낙관적 미래와 젊은 에너지를 나타내고자 하는 의도에서 비롯된 것이라 할 수 있습니다.</string>
+    <string name="color3_description">노랑은 쾌활함과 상쾌한 느낌을 줍니다. "노랑은 시선을 사로잡는 강렬한 색이죠. 개인적으로 노랑은 무언가를 강조할 때만 사용합니다"라고 Ackerman은 말합니다. 빨강과 마찬가지로 노랑도 적극적 정보 전달을 위한 경고 사이렌과 같은 역할을 합니다.</string>
+    <string name="color4_description">녹색은 일상에서 널리 사용되는 색으로, 색상환의 색 중 가장 유연한 색이라 할 수 있습니다. 지폐, 나무, 음식, 신호 등 다양한 곳에 사용되는 녹색은 음영을 통해서도 여러 의미를 전달할 수 있습니다. 자연의 색이라는 인식 때문에 유기농 브랜드나 요가 스튜디오 등에서 건강한 느낌을 강조하기 위해 많이 사용하며, 밝은 색조의 녹색은 금융 기관의 애플리케이션에 자주 사용됩니다. Ackerman은 "채도가 낮은 녹색은 차분함과 편안함의 느낌을 주지만 채도가 높은 녹색은 상쾌함과 활기를 더욱 높여줍니다"라고 말합니다.</string>
+    <string name="color5_description">친근한 색상인 파랑은 차분하면서도 안정감을 줍니다. 안전하고 중립적인 이미지를 가진 파랑은 사용 용도에 따라 전문성과 친근감을 동시에 나타냅니다. 또한 신뢰의 색으로, 모든 업계에 걸쳐 많은 브랜드가 긍정적인 브랜드 이미지를 주기 위해 파란색을 사용합니다.</string>
+    <string name="color6_description">보라는 충성심을 상징하는 색으로, 매우 우아한 색입니다. 따라서 신뢰를 강조하고자 할 때 유용합니다"라고 Ackerman은 말합니다. 신뢰의 이미지 외에도 신비로움의 이미지를 가지고 있는 보라색은 전통적으로 여성적인 색으로 여겨졌을 뿐 아니라 옛부터 왕족과 고급스러움을 나타내는 색이었습니다.</string>
+</resources>
