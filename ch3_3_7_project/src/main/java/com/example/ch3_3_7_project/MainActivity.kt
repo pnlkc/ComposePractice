@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -20,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -67,25 +69,25 @@ fun ColorItem(colorData: ColorData, modifier: Modifier = Modifier) {
     var expanded by remember { mutableStateOf(false) }
 
     Card(
-        modifier = modifier
-            .padding(16.dp)
-            // 카드 모서리 둥근 정도 조절하는 기능
-            .clip(RoundedCornerShape(12.dp))
-            // 카드를 클릭 가능하게 만들어주는 기능
-            .clickable(onClick = { expanded = !expanded })
-            // 컴포저블의 사이즈가 변경되었을 때 애니메이션을 주는 기능
-            .animateContentSize(
-                animationSpec = spring(
-                    dampingRatio = Spring.DampingRatioMediumBouncy,
-                    stiffness = Spring.StiffnessLow
-                )
-            ),
-        elevation = 6.dp
+        modifier = modifier.padding(12.dp),
+        // 카드 모서리 둥근 정도 조절하는 기능
+        shape = RoundedCornerShape(20.dp),
+        border = BorderStroke(2.dp, Color.Gray),
+        elevation = 10.dp
     ) {
         Column(
             modifier = modifier
                 .background(MaterialTheme.colors.secondary)
-                .padding(15.dp),
+                // 카드를 클릭 가능하게 만들어주는 기능
+                .clickable(onClick = { expanded = !expanded })
+                // 컴포저블의 사이즈가 변경되었을 때 애니메이션을 주는 기능
+                .animateContentSize(
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioMediumBouncy,
+                        stiffness = Spring.StiffnessLow
+                    )
+                )
+                .padding(16.dp),
             // 하위 객체들 사이의 수평 간격 조절하는 기능
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
