@@ -16,3 +16,7 @@
 > - 지금까지 배운 내용을 가지고 앱 만들어보기 (코드랩 3-3-7)
 > - 색상의 의미 앱을 만들었음
 > - 사용한 기술 : LazyColumn, Scaffold - TopBar, animateContentSize, 앱 색상(테마)변경 등
+
+***23.02.22***
+> - Activity의 생명주기 [onCreate(), onStart(), onRestart(), onResume(), onPause(), onStop(), onDestroy()]
+> - onDestroy() 후 재생성 되는 경우에도 값을 유지하려면 remember가 아닌 rememberSaveable을 사용해야됨
