@@ -34,3 +34,4 @@
 > 6) StateFlow는 Flow API를 사용가능 하여 다양한 기능을 사용할 수 있다
   
 > - Activity 클래스와 컴포저블 클래스, GameViewModel 클래스를 별도로 분리하여 앱 제작하는 방법 학습
+> - AlertDialog, OutlinedTextField 구현 형태 
