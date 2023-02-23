@@ -101,7 +101,7 @@ fun GameScreen(
             }
         }
 
-        if (gameUiState.isGameOVer) {
+        if (gameUiState.isGameOver) {
             FinalScoreDialog(
                 score = gameUiState.score,
                 onPlayAgain = { gameViewModel.resetGame() }
