@@ -35,3 +35,10 @@
   
 > - Activity 클래스와 컴포저블 클래스, GameViewModel 클래스를 별도로 분리하여 앱 제작하는 방법 학습
 > - AlertDialog, OutlinedTextField 구현 형태 
+
+***23.02.24***
+> - Unscramble 앱에 단위 테스트 작성 방법 학습
+> 1) Jumit을 활용한 assert(assertNotEquals, assertEquals, assertTrue, assertFalse)
+> 2) 테스트 함수의 이름은 thingUnderTest_TriggerOfTest_ResultOfTest 규칙으로 작성해야 
+> 3) 테스트 클래스의 테스트 메소드는 개별적으로 실행되어 각 테스트마다 테스트 클래스의 새로운 인스턴스를 생성 함
+> 4) 테스트 코드의 적용 범위(Coverage) 개선 필요 이유 및 방법 학습
