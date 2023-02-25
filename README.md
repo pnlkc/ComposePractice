@@ -20,6 +20,7 @@
 ***23.02.22***
 > - Activity의 생명주기 [onCreate(), onStart(), onRestart(), onResume(), onPause(), onStop(), onDestroy()]
 > - onDestroy() 후 재생성 되는 경우에도 값을 유지하려면 remember가 아닌 rememberSaveable을 사용해야됨  
+> - 구글 dessertclicker 앱으로 연습
 
 ***23.02.23***
 > - 앱 아키텍쳐 - ViewModel에서 앱의 UI 레이어의 상태를 관리하는 방법
@@ -42,3 +43,12 @@
 > 2) 테스트 함수의 이름은 thingUnderTest_TriggerOfTest_ResultOfTest 규칙으로 작성해야 
 > 3) 테스트 클래스의 테스트 메소드는 개별적으로 실행되어 각 테스트마다 테스트 클래스의 새로운 인스턴스를 생성 함
 > 4) 테스트 코드의 적용 범위(Coverage) 개선 필요 이유 및 방법 학습
+
+***23.02.25***
+> - dessertclicker 앱을 viewmode을 사용하는 앱으로 변경  
+
+> - 변경 도중 생긴 문제  
+> 1) DessertClickerUiState() 데이터 클래스의 `currentDessertImageId`의 초기값을 0으로 설정해서 앱 실행시 다운 됨  
+> 해결방법 : `currentDessertImageId`의 초기값을 dessertList[0].imageId로 변경
+> 2) DessertClickerUiState() 데이터 클래스의 `currentDessertPrice`의 초기값을 0으로 설정해서 앱 실행후 첫번째 클릭시 Total Revenue 값이 변하지 않음
+> 해결방법 : `currentDessertPrice`의 초기값을 dessertList[0].price로 변경
