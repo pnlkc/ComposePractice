@@ -15,8 +15,9 @@
             <option value="$PROJECT_DIR$/ch3_3_7_project" />
             <option value="$PROJECT_DIR$/ch3_3_material_design" />
             <option value="$PROJECT_DIR$/ch3_3_superheroes" />
-            <option value="$PROJECT_DIR$/ch4_1_2" />
+            <option value="$PROJECT_DIR$/ch4_1_2_dessertclicker" />
             <option value="$PROJECT_DIR$/ch4_1_5_unscramble" />
+            <option value="$PROJECT_DIR$/ch4_1_7_dessertclicker_with_viewmodel" />
           </set>
         </option>
       </GradleProjectSettings>
