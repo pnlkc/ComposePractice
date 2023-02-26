@@ -52,3 +52,18 @@
 > 해결방법 : `currentDessertImageId`의 초기값을 dessertList[0].imageId로 변경
 > 2) DessertClickerUiState() 데이터 클래스의 `currentDessertPrice`의 초기값을 0으로 설정해서 앱 실행후 첫번째 클릭시 Total Revenue 값이 변하지 않음
 > 해결방법 : `currentDessertPrice`의 초기값을 dessertList[0].price로 변경
+
+***23.02.26***
+> - Compose에서 Navigation 사용하는 방법 학습  
+
+> - Navigation의 구성요소 3가지
+> 1. NavController: 대상(즉, 앱의 화면) 간 이동을 담당합니다
+> 2. NavGraph: 이동할 컴포저블 대상을 매핑합니다
+> 3. NavHost: NavGraph의 현재 대상을 표시하는 컨테이너 역할을 하는 컴포저블입니다
+
+> - navHostController는 NavHost 컴포저블과 함께 사용할 추가 기능을 제공하는 NavController 클래스의 서브클래스입니다
+> - Intent를 통해 다른 앱으로 이동하는 법 학습
+
+> - 학습 도중 생긴 문제
+> 1) CodeLab의 7번 과정과 실제 코드가 일치하지 않음  
+> 해결방법 : Github의 완성 코드를 참고하여 수정 (완전히 동일하지는 않게  커스터마이징 함)
