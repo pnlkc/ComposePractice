@@ -86,9 +86,14 @@ fun CupcakeAppBar(
 }
 
 @Composable
-fun CupcakeApp(modifier: Modifier = Modifier, viewModel: OrderViewModel = viewModel()){
+fun CupcakeApp(
+    modifier: Modifier = Modifier,
+    viewModel: OrderViewModel = viewModel(),
+    navController: NavHostController = rememberNavController(),
+){
     // TODO: Create NavController
-    val navController = rememberNavController()
+    // Test 코드 작성 코드랩에서 CupcakeApp의 인자로 navController 전달하기 때문에 수정
+//    val navController = rememberNavController()
     // TODO: Get current back stack entry
     val backStackEntry by navController.currentBackStackEntryAsState()
     // TODO: Get the name of the current screen
