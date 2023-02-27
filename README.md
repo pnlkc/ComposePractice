@@ -75,3 +75,9 @@
 > 2. 테스트 코드에서는 일반적인 `NavHostController`를 사용하는 대신 `TestNavHostController`를 사용해야한다
 > 3. `@Before` 주석은 `@Test` 메소드보다 우선해서 실행 된다
 > 4. 반복되는 코드의 경우 확장함수를 사용하여 간결하게 바꿀 수 있다
+
+> - Compose와 Navigation을 이용한 앱 만들기 연습 (Lunch Tray)
+> 구글 솔루션 코드와 차이점들
+> 1. `cancel 버튼` 기능을 함수 메소드로 따로 분리
+> 2. AppBar의 타이틀 인자
+> 3. onSelectionChanged 람다의 it을 이름 지정후 
