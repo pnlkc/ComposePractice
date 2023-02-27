@@ -67,3 +67,11 @@
 > - 학습 도중 생긴 문제
 > 1) CodeLab의 7번 과정과 실제 코드가 일치하지 않음  
 > 해결방법 : Github의 완성 코드를 참고하여 수정 (완전히 동일하지는 않게  커스터마이징 함)
+
+***23.02.27***
+> - Compose와 Navigation을 사용한 앱 테스트하는 법 학습
+> 1. Compose UI를 테스트 할 때는 테스트 규칙을 생성해서 테스트 한다  
+> ex) @get: Rule val composeTestRule = createAndroidComposeRule<ComponentActivity>()
+> 2. 테스트 코드에서는 일반적인 `NavHostController`를 사용하는 대신 `TestNavHostController`를 사용해야한다
+> 3. `@Before` 주석은 `@Test` 메소드보다 우선해서 실행 된다
+> 4. 반복되는 코드의 경우 확장함수를 사용하여 간결하게 바꿀 수 있다
