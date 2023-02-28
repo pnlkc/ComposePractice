@@ -81,3 +81,12 @@
 > 1. `cancel 버튼` 기능을 함수 메소드로 따로 분리
 > 2. AppBar의 타이틀 인자
 > 3. onSelectionChanged 람다의 it을 이름 지정후 
+
+***23.02.28***
+> - 화면 크기에 따라 달리지는 앱 구현 연습
+> 1. Compose에서는 `calculateWindowSizeClass()`를 통해서 화면 크기를 알 수 있음  
+> gradle - dependencies - implementation "androidx.compose.material3:material3-window-size-class:$material_version" 추가 필요
+> 2. 화면 크기는 `Compact`(width : 0-599, height : 0-479), `Medium`(width : 600-839, height : 480-899), `Expanded`(width : 840+, height : 900+)로 나누어짐
+
+> - `NavHostController` 없이 `If - Else`문으로 간단한 화면 전환 효과구현
+> - `AnimatedVisibility()`를 통해 Composable 애니메이션을 포함해서 Visibility 구현 가능
