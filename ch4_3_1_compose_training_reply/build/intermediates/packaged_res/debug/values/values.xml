@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reply</string>
+    <string name="continue_composing">Continue Composing</string>
+    <string name="delete">Delete</string>
+    <string name="logo">Logo</string>
+    <string name="move_to_inbox">Move to Inbox</string>
+    <string name="navigation_back">Back</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="profile">Profile</string>
+    <string name="reply">Reply</string>
+    <string name="reply_all">Reply All</string>
+    <string name="tab_drafts">Drafts</string>
+    <string name="tab_inbox">Inbox</string>
+    <string name="tab_sent">Sent</string>
+    <string name="tab_spam">Spam</string>
+    <style name="Theme.Reply" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_1.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_1.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_0.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_0.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_9.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_9.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_3.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_3.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_parcel.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_parcel.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_7.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_7.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_2.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_2.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_8.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_8.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_4.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_4.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_6.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_6.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_logo.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/logo.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_spam.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_spam.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.reply.ch4_3_1_compose_training_reply-merged_res-46:/drawable_avatar_5.xml.flat",
+        "source": "com.example.reply.ch4_3_1_compose_training_reply-main-48:/drawable/avatar_5.xml"
+    }
+]
