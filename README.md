@@ -90,3 +90,12 @@
 
 > - `NavHostController` 없이 `If - Else`문으로 간단한 화면 전환 효과구현
 > - `AnimatedVisibility()`를 통해 Composable 애니메이션을 포함해서 Visibility 구현 가능
+
+***23.03.01***
+> - 화면 크기에 따라 달리지는 앱 구현 연습2
+> 1. Compose 미리보기 화면에서 `@Preview(widthDp = 700)`를 통해 미리보기 화면 크기 조절 가능
+> 2. Composable에 `modifier.testTag(태그)`를 통해 태그를 부여해서 `composeTestRule.onNodeWithTagForStringId(태그).assertExists()`로 테스트 가능
+> 3. Composable의 구성 변경 테스트는 `StateRestorationTester()` 클래스를 사용해서 가능하다 (`stateRestorationTester.emulateSavedInstanceStateRestore()`)
+
+> - 학습 도중 생긴 문제 : Expanded 화면의 미리보기가 제대로 나오지 않고 Drawer 화면이 가득차게 나오는 현상 발생   
+> - 해결방법 : `PermanentNavigationDrawer()`의 `drawerContent`의 `NavigationDrawerContent()`를 `PermanentDrawerSheet()`으로 감싼 뒤 `modifier.width(240.dp)` 값을 
