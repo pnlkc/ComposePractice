@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.reply.data.Email
 import com.example.reply.data.MailboxType
+import com.example.reply.ui.utils.ReplyContentType
 import com.example.reply.ui.utils.ReplyNavigationType
 
 /**
@@ -36,28 +37,34 @@ fun ReplyApp(
 ) {
     val viewModel: ReplyViewModel = viewModel()
     val replyUiState = viewModel.uiState.collectAsState().value
-    lateinit var navigationType: ReplyNavigationType
+    val navigationType: ReplyNavigationType
+    val contentType: ReplyContentType
 
     when (windowSize) {
         // width : 0-599, height : 0-479
         WindowWidthSizeClass.Compact -> {
             navigationType = ReplyNavigationType.BOTTOM_NAVIGATION
+            contentType = ReplyContentType.LIST_ONLY
         }
         // width : 600-839, height : 480-899
         WindowWidthSizeClass.Medium -> {
             navigationType = ReplyNavigationType.NAVIGATION_RAIL
+            contentType = ReplyContentType.LIST_ONLY
         }
         // width : 840+, height : 900+
         WindowWidthSizeClass.Expanded -> {
             navigationType = ReplyNavigationType.PERMANENT_NAVIGATION_DRAWER
+            contentType = ReplyContentType.LIST_AND_DETAIL
         }
         else -> {
             navigationType = ReplyNavigationType.BOTTOM_NAVIGATION
+            contentType = ReplyContentType.LIST_ONLY
         }
     }
 
     ReplyHomeScreen(
         navigationType = navigationType,
+        contentType = contentType,
         replyUiState = replyUiState,
         onTabPressed = { mailboxType: MailboxType ->
             viewModel.updateCurrentMailbox(mailboxType = mailboxType)

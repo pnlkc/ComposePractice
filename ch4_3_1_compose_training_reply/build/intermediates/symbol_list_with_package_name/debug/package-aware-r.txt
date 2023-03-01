@@ -192,6 +192,7 @@ string continue_composing
 string default_error_message
 string default_popup_window_title
 string delete
+string details_screen
 string dialog
 string dropdown_menu
 string expanded
@@ -200,8 +201,10 @@ string indeterminate
 string logo
 string move_to_inbox
 string navigation_back
+string navigation_bottom
 string navigation_drawer
 string navigation_menu
+string navigation_rail
 string not_selected
 string off
 string on

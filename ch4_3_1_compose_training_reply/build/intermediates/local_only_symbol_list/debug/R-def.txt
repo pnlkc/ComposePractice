@@ -20,10 +20,13 @@ mipmap ic_launcher_round
 string app_name
 string continue_composing
 string delete
+string details_screen
 string logo
 string move_to_inbox
 string navigation_back
+string navigation_bottom
 string navigation_drawer
+string navigation_rail
 string profile
 string reply
 string reply_all
