@@ -99,3 +99,10 @@
 
 > - 학습 도중 생긴 문제 : Expanded 화면의 미리보기가 제대로 나오지 않고 Drawer 화면이 가득차게 나오는 현상 발생   
 > - 해결방법 : `PermanentNavigationDrawer()`의 `drawerContent`의 `NavigationDrawerContent()`를 `PermanentDrawerSheet()`으로 감싼 뒤 `modifier.width(240.dp)` 값을 
+
+***23.03.02***
+> - 화면 크기에 따라 달리지는 앱 구현 연습3
+> - Sports 앱의 Expanded 화면을 직접 만들어보면서 연습 (구글 Compose 코드랩 4-3-5 과정)
+
+> - 학습 도중 생긴 문제 : Composable 내에서 현재 Activity를 가져오기 위해 `val activity = LocalContext.current as Activity` 를 사용했는데 이 부분이 Composable의 Preview를 빌드할 때 오류가 발생
+> - 해결방법 : 코드 문제가 아닌 안드로이드 스튜디오가 꼬인 것으로 File - Invalidate Caches 해주니 해결됨
