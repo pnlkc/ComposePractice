@@ -2,8 +2,8 @@
 안드로이드 Jetpack Compose를 연습하기 위한 프로젝트 입니다  
 구글의 강의(https://developer.android.com/courses/android-basics-compose/course?hl=ko)에 따라 공부하였습니다
 
-### 공부한 내용
-***23.02.20***  
+## 공부한 내용
+### ***23.02.20***  
 > - 기본적인 Compose 사용방법 및 Material Design을 사용한 앱 제작 연습
 > - Modifier의 기본적인 역할 공부
 > - LazyColumn, LazyVerticalGrid를 통한 RecyclerView와 비슷한 기능 구현
@@ -12,17 +12,17 @@
 > 문제 : Compose 1.2.0 부터 Scaffold 사용시 padding 값을 지정하지 않으면 "UnusedMaterialScaffoldPaddingParameter" 에러 발생  
 > 해결방법 : Scaffold 안의 Compsable 메소드에 Modifier.padding(it)을 추가하여 해결 (it은 PaddingValues를 의미)
   
-***23.02.21***
+### ***23.02.21***
 > - 지금까지 배운 내용을 가지고 앱 만들어보기 (코드랩 3-3-7)
 > - 색상의 의미 앱을 만들었음
 > - 사용한 기술 : LazyColumn, Scaffold - TopBar, animateContentSize, 앱 색상(테마)변경 등
 
-***23.02.22***
+### ***23.02.22***
 > - Activity의 생명주기 [onCreate(), onStart(), onRestart(), onResume(), onPause(), onStop(), onDestroy()]
 > - onDestroy() 후 재생성 되는 경우에도 값을 유지하려면 remember가 아닌 rememberSaveable을 사용해야됨  
 > - 구글 dessertclicker 앱으로 연습
 
-***23.02.23***
+### ***23.02.23***
 > - 앱 아키텍쳐 - ViewModel에서 앱의 UI 레이어의 상태를 관리하는 방법
 > - StateFlow라는 옵저버블 데이터 홀더 flow 학습  
   
@@ -37,14 +37,14 @@
 > - Activity 클래스와 컴포저블 클래스, GameViewModel 클래스를 별도로 분리하여 앱 제작하는 방법 학습
 > - AlertDialog, OutlinedTextField 구현 형태 
 
-***23.02.24***
+### ***23.02.24***
 > - Unscramble 앱에 단위 테스트 작성 방법 학습
 > 1) Jumit을 활용한 assert(assertNotEquals, assertEquals, assertTrue, assertFalse 등)
 > 2) 테스트 함수의 이름은 `thingUnderTest_TriggerOfTest_ResultOfTest` 규칙으로 작성하는 것이 좋음
 > 3) 테스트 클래스의 테스트 메소드는 개별적으로 실행되어 각 테스트마다 테스트 클래스의 새로운 인스턴스를 생성 함
 > 4) 테스트 코드의 적용 범위(Coverage) 개선 필요 이유 및 방법 학습
 
-***23.02.25***
+### ***23.02.25***
 > - dessertclicker 앱을 viewmode을 사용하는 앱으로 변경  
 
 > - 변경 도중 생긴 문제  
@@ -53,7 +53,7 @@
 > 2) DessertClickerUiState() 데이터 클래스의 `currentDessertPrice`의 초기값을 0으로 설정해서 앱 실행후 첫번째 클릭시 Total Revenue 값이 변하지 않음
 > 해결방법 : `currentDessertPrice`의 초기값을 dessertList[0].price로 변경
 
-***23.02.26***
+### ***23.02.26***
 > - Compose에서 Navigation 사용하는 방법 학습  
 
 > - Navigation의 구성요소 3가지
@@ -68,7 +68,7 @@
 > 1) CodeLab의 7번 과정과 실제 코드가 일치하지 않음  
 > 해결방법 : Github의 완성 코드를 참고하여 수정 (완전히 동일하지는 않게  커스터마이징 함)
 
-***23.02.27***
+### ***23.02.27***
 > - Compose와 Navigation을 사용한 앱 테스트하는 법 학습
 > 1. Compose UI를 테스트 할 때는 테스트 규칙을 생성해서 테스트 한다  
 > ex) @get: Rule val composeTestRule = createAndroidComposeRule<ComponentActivity>()
@@ -82,7 +82,7 @@
 > 2. AppBar의 타이틀 인자
 > 3. onSelectionChanged 람다의 it을 이름 지정후 
 
-***23.02.28***
+### ***23.02.28***
 > - 화면 크기에 따라 달리지는 앱 구현 연습
 > 1. Compose에서는 `calculateWindowSizeClass()`를 통해서 화면 크기를 알 수 있음  
 > gradle - dependencies - implementation "androidx.compose.material3:material3-window-size-class:$material_version" 추가 필요
@@ -91,7 +91,7 @@
 > - `NavHostController` 없이 `If - Else`문으로 간단한 화면 전환 효과구현
 > - `AnimatedVisibility()`를 통해 Composable 애니메이션을 포함해서 Visibility 구현 가능
 
-***23.03.01***
+### ***23.03.01***
 > - 화면 크기에 따라 달리지는 앱 구현 연습2
 > 1. Compose 미리보기 화면에서 `@Preview(widthDp = 700)`를 통해 미리보기 화면 크기 조절 가능
 > 2. Composable에 `modifier.testTag(태그)`를 통해 태그를 부여해서 `composeTestRule.onNodeWithTagForStringId(태그).assertExists()`로 테스트 가능
@@ -100,7 +100,7 @@
 > - 학습 도중 생긴 문제 : Expanded 화면의 미리보기가 제대로 나오지 않고 Drawer 화면이 가득차게 나오는 현상 발생   
 > - 해결방법 : `PermanentNavigationDrawer()`의 `drawerContent`의 `NavigationDrawerContent()`를 `PermanentDrawerSheet()`으로 감싼 뒤 `modifier.width(240.dp)` 값을 
 
-***23.03.02***
+### ***23.03.02***
 > - 화면 크기에 따라 달리지는 앱 구현 연습3
 > - Sports 앱의 Expanded 화면을 직접 만들어보면서 연습 (구글 Compose 코드랩 4-3-5 과정)
 
