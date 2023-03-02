@@ -24,6 +24,7 @@ import com.example.affirmations.ui.theme.AffirmationsTheme
 import com.example.affirmations.ui.theme.Typography
 import com.example.ch3_2_affirmation.data.PracticeDataSource
 import com.example.ch3_2_affirmation.model.Topic
+import com.example.ch3_2_affirmation.R
 
 class PracticeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
