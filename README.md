@@ -108,7 +108,7 @@
 > - 학습 도중 생긴 문제 : Composable 내에서 현재 Activity를 가져오기 위해 `val activity = LocalContext.current as Activity` 를 사용했는데 이 부분이 Composable의 Preview를 빌드할 때 오류가 발생
 > - 해결방법 : 코드 문제가 아닌 안드로이드 스튜디오가 꼬인 것으로 File - Invalidate Caches 해주니 해결됨
 
-### ***23.03.02***
+### ***23.03.03***
 > - 화면 크기에 따라 달리지는 앱 구현 연습3
 > - 지금까지 배운 기술들을 활용해서 처음부터 앱 구현(구글 Compose 코드랩 4-3-6 과정)
 > 1. LazyColumn을 사용하여 리스트를 포함한 화면 구성
