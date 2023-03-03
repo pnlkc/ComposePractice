@@ -3,6 +3,7 @@
 구글의 강의(https://developer.android.com/courses/android-basics-compose/course?hl=ko)에 따라 공부하였습니다
 
 ## 공부한 내용
+
 ### ***23.02.20***  
 > - 기본적인 Compose 사용방법 및 Material Design을 사용한 앱 제작 연습
 > - Modifier의 기본적인 역할 공부
@@ -11,7 +12,7 @@
 > - 문제해결  
 > 문제 : Compose 1.2.0 부터 Scaffold 사용시 padding 값을 지정하지 않으면 "UnusedMaterialScaffoldPaddingParameter" 에러 발생  
 > 해결방법 : Scaffold 안의 Compsable 메소드에 Modifier.padding(it)을 추가하여 해결 (it은 PaddingValues를 의미)
-  
+
 ### ***23.02.21***
 > - 지금까지 배운 내용을 가지고 앱 만들어보기 (코드랩 3-3-7)
 > - 색상의 의미 앱을 만들었음
@@ -106,3 +107,16 @@
 
 > - 학습 도중 생긴 문제 : Composable 내에서 현재 Activity를 가져오기 위해 `val activity = LocalContext.current as Activity` 를 사용했는데 이 부분이 Composable의 Preview를 빌드할 때 오류가 발생
 > - 해결방법 : 코드 문제가 아닌 안드로이드 스튜디오가 꼬인 것으로 File - Invalidate Caches 해주니 해결됨
+
+### ***23.03.02***
+> - 화면 크기에 따라 달리지는 앱 구현 연습3
+> - 지금까지 배운 기술들을 활용해서 처음부터 앱 구현(구글 Compose 코드랩 4-3-6 과정)
+> 1. LazyColumn을 사용하여 리스트를 포함한 화면 구성
+> 2. Card를 사용하여 LazyColumn의 아이템을 구현
+> 3. Navigation을 사용하여 화면 이동 구현
+
+> - 학습도중 생긴 문제
+> 1. 컴포저블에서 뷰모델 변수를 선언할 때 viewModel() 기능이 오류가 남
+> 해결방법 : gradle에 implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version" 추가
+> 2. 첫번째 화면에서 앱바 좌측에 화살표 아이콘이 표시되지 않는데 타이틀 글자가 밀려서 생기는 문제 발생
+> 해결방법 TopAppBar() 컴포저블의 navigationIcon 값을 if-else문을 사용해 아이콘이 없을 때 null로 처리함
