@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -25,6 +26,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.ch4_3_6_my_city.R
 import com.example.ch4_3_6_my_city.data.Shape
 import com.example.ch4_3_6_my_city.data.ShapeWithColor
 import com.example.ch4_3_6_my_city.data.local.LocalShapeDataProvider
@@ -56,8 +58,6 @@ fun MyCityApp(
     val contentType: MyCityContentType = when (windowSize) {
         // width : 0-599, height : 0-479
         WindowWidthSizeClass.Compact -> MyCityContentType.SHAPE_ONLY
-        // width : 600-839, height : 480-899
-        WindowWidthSizeClass.Medium -> MyCityContentType.SHAPE_AND_COLOR
         // width : 840+, height : 900+
         WindowWidthSizeClass.Expanded -> MyCityContentType.ALL_CONTENT
         else -> MyCityContentType.SHAPE_ONLY
@@ -71,53 +71,66 @@ fun MyCityApp(
     Scaffold(
         topBar = {
             MyCityAppBar(
+                contentType = contentType,
                 currentScreenName = backStackEntry?.destination?.route ?: MyCityScreen.Shape.name,
                 canNavigateBack = navController.previousBackStackEntry != null,
                 navigateUp = { navController.navigateUp() },
             )
         }
     ) { innerPadding ->
-        NavHost(
-            navController = navController,
-            // 시작 화면을 Shape 화면으로 지정
-            startDestination = MyCityScreen.Shape.name,
-            modifier = modifier.padding(innerPadding)
-        ) {
-            // Shape 화면
-            composable(
-                route = MyCityScreen.Shape.name
-            ) {
-                ShapeScreen(
-                    shapes = myCityUiState.shapes,
-                    onClick = {
-                        viewModel.updateCurrentShapeType(it.shapeType)
-                        navController.navigate(MyCityScreen.Color.name)
+        when (contentType) {
+            MyCityContentType.SHAPE_ONLY -> {
+                NavHost(
+                    navController = navController,
+                    // 시작 화면을 Shape 화면으로 지정
+                    startDestination = MyCityScreen.Shape.name,
+                    modifier = modifier.padding(innerPadding)
+                ) {
+                    // Shape 화면
+                    composable(
+                        route = MyCityScreen.Shape.name
+                    ) {
+                        ShapeScreen(
+                            shapes = myCityUiState.shapes,
+                            onClick = {
+                                viewModel.updateCurrentShapeType(it.shapeType)
+                                navController.navigate(MyCityScreen.Color.name)
+                            }
+                        )
                     }
-                )
-            }
 
-            // Color 화면
-            composable(
-                route = MyCityScreen.Color.name
-            ) {
-                ColorScreen(
-                    shapeWithColors = myCityUiState.shapeWithColors[myCityUiState.currentShape]!!,
-                    onClick = {
-                        viewModel.updateCurrentSelectedShapeWithColor(it)
-                        navController.navigate(MyCityScreen.Detail.name)
+                    // Color 화면
+                    composable(
+                        route = MyCityScreen.Color.name
+                    ) {
+                        ColorScreen(
+                            shapeWithColors = myCityUiState.shapeWithColors[myCityUiState.currentShape]!!,
+                            onClick = {
+                                viewModel.updateCurrentSelectedShapeWithColor(it)
+                                navController.navigate(MyCityScreen.Detail.name)
+                            }
+                        )
                     }
-                )
-            }
 
-            // Detail 화면
-            composable(
-                route = MyCityScreen.Detail.name
-            ) {
-                DetailScreen(
-                    shapeWithColor = myCityUiState.currentSelectedShapeWithColor
+                    // Detail 화면
+                    composable(
+                        route = MyCityScreen.Detail.name
+                    ) {
+                        DetailScreen(
+                            shapeWithColor = myCityUiState.currentSelectedShapeWithColor
+                        )
+                    }
+                }
+            }
+            else -> {
+                AllContentScreen(
+                    uiState = myCityUiState,
+                    onShapeClicked = { viewModel.updateCurrentShapeType(it.shapeType) },
+                    onColorClicked = { viewModel.updateCurrentSelectedShapeWithColor(it) }
                 )
             }
         }
+
     }
 }
 
@@ -268,18 +281,54 @@ fun DetailScreen(
     }
 }
 
+@Composable
+fun AllContentScreen(
+    uiState: MyCityUiState,
+    onShapeClicked: (Shape) -> Unit,
+    onColorClicked: (ShapeWithColor) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier.fillMaxWidth()
+    ) {
+        ShapeScreen(
+            shapes = uiState.shapes,
+            onClick = onShapeClicked,
+            modifier = modifier.weight(1f)
+        )
+
+        ColorScreen(
+            shapeWithColors = uiState.shapeWithColors[uiState.currentShape]!!,
+            onClick = onColorClicked,
+            modifier = modifier.weight(1f)
+        )
+
+        DetailScreen(
+            shapeWithColor = uiState.currentSelectedShapeWithColor,
+            modifier = modifier.weight(1f)
+        )
+    }
+}
+
 // 상단 앱바 구성
 @Composable
 fun MyCityAppBar(
+    contentType: MyCityContentType,
     currentScreenName: String,
     canNavigateBack: Boolean,
     navigateUp: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val title = if (contentType != MyCityContentType.SHAPE_ONLY) {
+        stringResource(id = R.string.app_name)
+    } else {
+        MyCityScreen.valueOf(currentScreenName).title
+    }
+
     TopAppBar(
-        title = { Text(MyCityScreen.valueOf(currentScreenName).title) },
+        title = { Text(title) },
         modifier = modifier,
-        navigationIcon = if (canNavigateBack) {
+        navigationIcon = if (canNavigateBack && contentType == MyCityContentType.SHAPE_ONLY) {
             // 람다 형식으로 한번 감싸줘야 함
             {
                 IconButton(onClick = navigateUp) {

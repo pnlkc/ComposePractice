@@ -3,10 +3,15 @@ package com.example.ch4_3_6_my_city
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.Surface
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.ch4_3_6_my_city.ui.MyCityApp
 import com.example.ch4_3_6_my_city.ui.theme.MyCityTheme
+
 
 /*
 이 앱은 다음 요건을 충족해야 합니다.
@@ -38,6 +43,26 @@ class MainActivity : ComponentActivity() {
                     windowSize = windowSize.widthSizeClass
                 )
             }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun MyCityAppPreview() {
+    MyCityTheme {
+        Surface {
+            MyCityApp(windowSize = WindowWidthSizeClass.Compact)
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 1000)
+@Composable
+fun MyCityAppExpandedPreview() {
+    MyCityTheme {
+        Surface {
+            MyCityApp(windowSize = WindowWidthSizeClass.Expanded)
         }
     }
 }

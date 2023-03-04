@@ -8,6 +8,6 @@ import com.example.ch4_3_6_my_city.data.local.LocalShapeWithColorDataProvider
 data class MyCityUiState(
     val shapes: List<Shape> = emptyList(),
     val shapeWithColors: Map<ShapeType, List<ShapeWithColor>> = emptyMap(),
-    val currentShape: ShapeType = ShapeType.NOTHING,
+    val currentShape: ShapeType = ShapeType.CIRCLE,
     val currentSelectedShapeWithColor: ShapeWithColor = LocalShapeWithColorDataProvider.defaultShapeWithColor,
 )
