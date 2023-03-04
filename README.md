@@ -120,3 +120,9 @@
 > 해결방법 : gradle에 implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version" 추가
 > 2. 첫번째 화면에서 앱바 좌측에 화살표 아이콘이 표시되지 않는데 타이틀 글자가 밀려서 생기는 문제 발생
 > 해결방법 TopAppBar() 컴포저블의 navigationIcon 값을 if-else문을 사용해 아이콘이 없을 때 null로 처리함
+
+### ***23.03.04***
+> - 화면 크기에 따라 달리지는 앱 구현 연습5
+> - 지금까지 배운 기술들을 활용해서 처음부터 앱 구현(구글 Compose 코드랩 4-3-6 과정)
+> 1. calculateWindowSizeClass() - widthSizeClass()를 사용해서 기기의 화면 크기에 따라 달라지는 기능 구현
+> 2. Expanded 화면에서는 3가지 화면(Shape, Color, Detail)이 모두 보여지고 앱바의 뒤로 버튼이 보이지 않게 구현
