@@ -134,3 +134,4 @@
 > 3. coroutineScope 블록은 블록 내부의 모든 코드가 실행이 완료되어야 반환되고 계속 진행됨
 > 4. `public inline fun require(value: Boolean, lazyMessage: () -> Any): Unit`를 사용해서 value가 false면 IllegalArgumentException을 Throw할 수 있음
 > 5. Coroutine의 Test는 runTest 블럭 안에서 실행할 수 있음 (testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4' 추가 )
+> 6. Coroutine을 테스트 할 때 advanceTimeBy()을 사용해 특정 시간 만큼 진행시키고 runCurrent()를 통해 advanceTimeBy()에 의해 진행된 시간의 작업을 실행할 
