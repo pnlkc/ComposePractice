@@ -126,3 +126,11 @@
 > - 지금까지 배운 기술들을 활용해서 처음부터 앱 구현(구글 Compose 코드랩 4-3-6 과정)
 > 1. calculateWindowSizeClass() - widthSizeClass()를 사용해서 기기의 화면 크기에 따라 달라지는 기능 구현
 > 2. Expanded 화면에서는 3가지 화면(Shape, Color, Detail)이 모두 보여지고 앱바의 뒤로 버튼이 보이지 않게 구현
+
+### ***23.03.06***
+> - Compose에서 비동기 작업 연습 with Coroutine
+> 1. Composable에서 Coroutine을 실행하려면 LanchedEffect()라는 Composable 안에서 실행해야 됨
+> 2. LaunchedEffect()의 인자인 key값이 변경되면 기본 코루틴이 취소되고 다시 실행 됨
+> 3. coroutineScope 블록은 블록 내부의 모든 코드가 실행이 완료되어야 반환되고 계속 진행됨
+> 4. `public inline fun require(value: Boolean, lazyMessage: () -> Any): Unit`를 사용해서 value가 false면 IllegalArgumentException을 Throw할 수 있음
+> 5. Coroutine의 Test는 runTest 블럭 안에서 실행할 수 있음 (testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4' 추가 )
