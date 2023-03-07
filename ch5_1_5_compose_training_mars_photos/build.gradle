@@ -1,0 +1,95 @@
+/*
+ * Copyright (C) 2022 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+직렬화(serialization)는 애플리케이션에서 사용하는 데이터를 네트워크를 통해 전송할 수 있는 형식으로 변환하는 프로세스입니다.
+직렬화와 반대로 역직렬화(Deserialization)는 외부 소스(예: 서버)에서 데이터를 읽어 런타임 객체로 변환하는 프로세스입니다.
+
+kotlinx.serialization은 JSON 문자열을 Kotlin 객체로 변환하는 일련의 라이브러리를 제공합니다.
+Retrofit과 호환되도록 커뮤니티에서 개발한 서드 파티 라이브러리로 Kotlin 직렬화 변환기가 있습니다.
+ */
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    // kotlinx serialization을 사용하기 위해 필요
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.10'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.marsphotos"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_compiler_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    namespace 'com.example.marsphotos'
+}
+
+dependencies {
+    // Import the Compose BOM
+    implementation platform('androidx.compose:compose-bom:2023.01.00')
+
+    implementation "androidx.activity:activity-compose:1.6.1"
+    implementation "androidx.compose.material:material"
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    debugImplementation "androidx.compose.ui:ui-tooling"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // Retrofit with Scalar Converter
+    // Retrofit으로 받아온 JSON 데이터를 코틀린 객체로 반환하게 해주는 기능
+    implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
+    // Kotlin 프로젝트에 JSON 직렬화를 해주는 기능
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
+}
