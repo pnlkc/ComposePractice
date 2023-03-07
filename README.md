@@ -149,6 +149,7 @@
 > 5. Coroutine의 Test는 runTest 블럭 안에서 실행할 수 있음 (testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4' 추가 필요)
 > 6. Coroutine을 테스트 할 때 advanceTimeBy()을 사용해 특정 시간 만큼 진행시키고 runCurrent()를 통해 advanceTimeBy()에 의해 진행된 시간의 작업을 실행할 수 있음
 > 7. Test할 때 Exception Thrown을 테스트 하고 싶으면 어노테이션을 수정해서 할 수 있음 (예시 `@Test (expected = IllegalArgumentException::class)`)  
+<br>
 
 ### ***23.03.07***
 > - Retrofit2를 사용하여 네트워트와 통신하는 방법 공부
