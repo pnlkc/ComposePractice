@@ -11,7 +11,7 @@ private const val BASE_URL = "https://android-kotlin-fun-mars-server.appspot.com
 
 // Retrofit 객체 생성
 private val retrofit = Retrofit.Builder()
-    // Retrofit으로 받아온 JSON 데이터를 String으로 반환하게 해주는 SaclarsConverter를 Retrofit 객체에 추가
+    // Retrofit으로 받아온 JSON 데이터를 코틀린 객체로 변환 해주는 kotlinx serialization를 Retrofit 객체에 추가
     .addConverterFactory(Json.asConverterFactory(MediaType.get("application/json")))
     // Retrofit에 웹 서비스의 기본 URL을 추가
     .baseUrl(BASE_URL)
