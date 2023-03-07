@@ -12,16 +12,19 @@
 > - 문제해결  
 > 문제 : Compose 1.2.0 부터 Scaffold 사용시 padding 값을 지정하지 않으면 "UnusedMaterialScaffoldPaddingParameter" 에러 발생  
 > 해결방법 : Scaffold 안의 Compsable 메소드에 Modifier.padding(it)을 추가하여 해결 (it은 PaddingValues를 의미)
+<br>
 
 ### ***23.02.21***
 > - 지금까지 배운 내용을 가지고 앱 만들어보기 (코드랩 3-3-7)
 > - 색상의 의미 앱을 만들었음
 > - 사용한 기술 : LazyColumn, Scaffold - TopBar, animateContentSize, 앱 색상(테마)변경 등
+<br>
 
 ### ***23.02.22***
 > - Activity의 생명주기 [onCreate(), onStart(), onRestart(), onResume(), onPause(), onStop(), onDestroy()]
 > - onDestroy() 후 재생성 되는 경우에도 값을 유지하려면 remember가 아닌 rememberSaveable을 사용해야됨  
 > - 구글 dessertclicker 앱으로 연습
+<br>
 
 ### ***23.02.23***
 > - 앱 아키텍쳐 - ViewModel에서 앱의 UI 레이어의 상태를 관리하는 방법
@@ -37,6 +40,7 @@
   
 > - Activity 클래스와 컴포저블 클래스, GameViewModel 클래스를 별도로 분리하여 앱 제작하는 방법 학습
 > - AlertDialog, OutlinedTextField 구현 형태 
+<br>
 
 ### ***23.02.24***
 > - Unscramble 앱에 단위 테스트 작성 방법 학습
@@ -44,6 +48,7 @@
 > 2) 테스트 함수의 이름은 `thingUnderTest_TriggerOfTest_ResultOfTest` 규칙으로 작성하는 것이 좋음
 > 3) 테스트 클래스의 테스트 메소드는 개별적으로 실행되어 각 테스트마다 테스트 클래스의 새로운 인스턴스를 생성 함
 > 4) 테스트 코드의 적용 범위(Coverage) 개선 필요 이유 및 방법 학습
+<br>
 
 ### ***23.02.25***
 > - dessertclicker 앱을 viewmode을 사용하는 앱으로 변경  
@@ -53,6 +58,7 @@
 > 해결방법 : `currentDessertImageId`의 초기값을 dessertList[0].imageId로 변경
 > 2) DessertClickerUiState() 데이터 클래스의 `currentDessertPrice`의 초기값을 0으로 설정해서 앱 실행후 첫번째 클릭시 Total Revenue 값이 변하지 않음
 > 해결방법 : `currentDessertPrice`의 초기값을 dessertList[0].price로 변경
+<br>
 
 ### ***23.02.26***
 > - Compose에서 Navigation 사용하는 방법 학습  
@@ -68,6 +74,7 @@
 > - 학습 도중 생긴 문제
 > 1) CodeLab의 7번 과정과 실제 코드가 일치하지 않음  
 > 해결방법 : Github의 완성 코드를 참고하여 수정 (완전히 동일하지는 않게  커스터마이징 함)
+<br>
 
 ### ***23.02.27***
 > - Compose와 Navigation을 사용한 앱 테스트하는 법 학습
@@ -82,6 +89,7 @@
 > 1. `cancel 버튼` 기능을 함수 메소드로 따로 분리
 > 2. AppBar의 타이틀 인자
 > 3. onSelectionChanged 람다의 it을 이름 지정후 
+<br>
 
 ### ***23.02.28***
 > - 화면 크기에 따라 달리지는 앱 구현 연습
@@ -91,6 +99,7 @@
 
 > - `NavHostController` 없이 `If - Else`문으로 간단한 화면 전환 효과구현
 > - `AnimatedVisibility()`를 통해 Composable 애니메이션을 포함해서 Visibility 구현 가능
+<br>
 
 ### ***23.03.01***
 > - 화면 크기에 따라 달리지는 앱 구현 연습2
@@ -100,6 +109,7 @@
 
 > - 학습 도중 생긴 문제 : Expanded 화면의 미리보기가 제대로 나오지 않고 Drawer 화면이 가득차게 나오는 현상 발생   
 > - 해결방법 : `PermanentNavigationDrawer()`의 `drawerContent`의 `NavigationDrawerContent()`를 `PermanentDrawerSheet()`으로 감싼 뒤 `modifier.width(240.dp)` 값을 
+<br>
 
 ### ***23.03.02***
 > - 화면 크기에 따라 달리지는 앱 구현 연습3
@@ -107,6 +117,7 @@
 
 > - 학습 도중 생긴 문제 : Composable 내에서 현재 Activity를 가져오기 위해 `val activity = LocalContext.current as Activity` 를 사용했는데 이 부분이 Composable의 Preview를 빌드할 때 오류가 발생
 > - 해결방법 : 코드 문제가 아닌 안드로이드 스튜디오가 꼬인 것으로 File - Invalidate Caches 해주니 해결됨
+<br>
 
 ### ***23.03.03***
 > - 화면 크기에 따라 달리지는 앱 구현 연습4
@@ -120,12 +131,14 @@
 > 해결방법 : gradle에 implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version" 추가
 > 2. 첫번째 화면에서 앱바 좌측에 화살표 아이콘이 표시되지 않는데 타이틀 글자가 밀려서 생기는 문제 발생
 > 해결방법 TopAppBar() 컴포저블의 navigationIcon 값을 if-else문을 사용해 아이콘이 없을 때 null로 처리함
+<br>
 
 ### ***23.03.04***
 > - 화면 크기에 따라 달리지는 앱 구현 연습5
 > - 지금까지 배운 기술들을 활용해서 처음부터 앱 구현(구글 Compose 코드랩 4-3-6 과정)
 > 1. calculateWindowSizeClass() - widthSizeClass()를 사용해서 기기의 화면 크기에 따라 달라지는 기능 구현
 > 2. Expanded 화면에서는 3가지 화면(Shape, Color, Detail)이 모두 보여지고 앱바의 뒤로 버튼이 보이지 않게 구현
+<br>
 
 ### ***23.03.06***
 > - Compose에서 비동기 작업 연습 with Coroutine
@@ -136,3 +149,14 @@
 > 5. Coroutine의 Test는 runTest 블럭 안에서 실행할 수 있음 (testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4' 추가 필요)
 > 6. Coroutine을 테스트 할 때 advanceTimeBy()을 사용해 특정 시간 만큼 진행시키고 runCurrent()를 통해 advanceTimeBy()에 의해 진행된 시간의 작업을 실행할 수 있음
 > 7. Test할 때 Exception Thrown을 테스트 하고 싶으면 어노테이션을 수정해서 할 수 있음 (예시 `@Test (expected = IllegalArgumentException::class)`)  
+
+### ***23.03.07***
+> - Retrofit2를 사용하여 네트워트와 통신하는 방법 공부
+> 0. gradle 추가
+> 1. Retrofit.Builder()를 통해 Retrofit 객체를 생성
+> 2. Retrofit 객체에 addConverterFactory()을 통해 JSON Convertor 추가(scalars converter, kotlinx serialization converter 등)  
+> 3. baseUrl()에 기본 URL을 추가
+> 4. Retrofit이 HTTP 요청을 사용하여 웹 서버와 통신하는 방법을 정의하는 인터페이스 생성
+> 5. 인터페이스를 사용하여 Retrofit 객체를 초기화한 싱글톤 객체 생성
+> 6. viewModel에서 viewModelScope 안에서 통신 기능 실행 <- 이 과정은 추후에 Repository로 이동할 예정
+<br>
