@@ -92,4 +92,7 @@ dependencies {
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
     // Kotlin 프로젝트에 JSON 직렬화를 해주는 기능
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
 }
