@@ -15,7 +15,6 @@
  */
 package com.example.marsphotos.ui.screens
 
-import android.text.Spannable.Factory
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -26,7 +25,6 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.marsphotos.MarsPhotosApplication
-import com.example.marsphotos.data.DefaultMarsPhotosRepository
 import com.example.marsphotos.data.MarsPhotoRepository
 import kotlinx.coroutines.launch
 import java.io.IOException
