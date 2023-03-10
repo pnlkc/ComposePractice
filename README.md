@@ -189,3 +189,21 @@
      하지만 runTest 블록으로 감싸면 코루틴이 완료될 때까지 대기할 수 있으므로 테스트를 완료할 수 있습니다.  
 > 때문에 코루틴을 테스트 할 때는 runTest 블록으로 감싸지 않아도 정상적으로 작동할 수 있지만 감싸서 테스트하는 것이 안전함  
 <br>
+
+### ***23.03.10***
+> - Coil 라이브러리와 AsyncImage 컴포저블을 이용해서 인터넷에서 이미지 로딩하기
+> 0. gradle 추가 - implementation "io.coil-kt:coil-compose:2.2.2"  
+> 1. Compose에서 Coil 라이브러리를 사용해 이미지를 로딩할 때는 AsyncImage 컴포저블을 이용하면 비동기적으로 이미지를 로딩할 수 있음  
+> 2. AsyncImage의 model에 Coil - ImageRequest 객체를 넣어주면 됨
+> 3. AsyncImage의 error에는 에러시 표시할 이미지를 placeholder에는 이미지 로딩중에 표시할 이미지를 입력
+
+> - LazyVerticalGrid, LazyHorizontalGrid 구현
+> 1. Recycler뷰의 그리드화면과 같은 화면을 LazyVerticalGrid, LazyHorizontalGrid 컴포저블로 구현 가능
+> 2. columns나 rows에 GridCells.Adaptive(최소dp) 혹은 GridCells.Fixed(표시할 갯수)를 입력해서 모양 지정 가능
+> 3. items의 key에 값을 지정해서 각 아이템이 고유한 키를 가지게 할 수 있음 (스크롤 위치 기억 등에 사용 가능)
+
+> - 학습 도중 생긴 문제  
+> Retrofit 객체를 생성할 때 addConverterFactory(Json.asConverterFactory(MediaType.get("application/json"))) 이렇게 kotlinx serialization를 사용했는데  
+> MediaType.get()이 deprecated 되어서 에러가 발생함  
+> 해결방법 : addConverterFactory(Json.asConverterFactory("application/json".toMediaType())) mediaType.toMediaType()를 사용하여 해결  
+<br>
