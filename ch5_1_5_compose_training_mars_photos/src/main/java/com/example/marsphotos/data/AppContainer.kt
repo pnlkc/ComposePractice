@@ -5,6 +5,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 
 // 의존성 주입을 위한 컨테이너
@@ -22,7 +23,8 @@ class DefaultAppContainer : AppContainer {
     @OptIn(ExperimentalSerializationApi::class)
     private val retrofit = Retrofit.Builder()
         // Retrofit으로 받아온 JSON 데이터를 코틀린 객체로 변환 해주는 kotlinx serialization를 Retrofit 객체에 추가
-        .addConverterFactory(Json.asConverterFactory(MediaType.get("application/json")))
+        // MediaType.get()은 Deprecated 됨 => mediaType.toMediaType()를 사용해야 됨
+        .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
         // Retrofit에 웹 서비스의 기본 URL을 추가
         .baseUrl(BASE_URL)
         // build()를 통해 Retrofit 객체 생성

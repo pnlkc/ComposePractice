@@ -26,6 +26,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.marsphotos.MarsPhotosApplication
 import com.example.marsphotos.data.MarsPhotoRepository
+import com.example.marsphotos.network.MarsPhoto
 import kotlinx.coroutines.launch
 import java.io.IOException
 
@@ -37,7 +38,7 @@ import java.io.IOException
     Success와 Error가
  */
 sealed interface MarsUiState {
-    data class Success(val photos: String) : MarsUiState
+    data class Success(val photos: List<MarsPhoto>) : MarsUiState
     object Error : MarsUiState
     object Loading : MarsUiState
 }
@@ -63,9 +64,7 @@ class MarsViewModel(private val marsPhotoRepository: MarsPhotoRepository) : View
                 // 아래 코드처럼 쓰면 앱 아키텍쳐 원칙에 맞지 않음 (레이어 간의 의존성 문제 발생)
 //                val listResult = MarsApi.retrofitService.getPhotos()
 
-                val listResult = marsPhotoRepository.getMarsPhotos()
-
-                MarsUiState.Success("Success: ${listResult.size} Mars photos retrieved")
+                MarsUiState.Success(marsPhotoRepository.getMarsPhotos())
             } catch (e: IOException) {
                 MarsUiState.Error
             }
