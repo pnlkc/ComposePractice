@@ -207,3 +207,11 @@
 > MediaType.get()이 deprecated 되어서 에러가 발생함  
 > 해결방법 : addConverterFactory(Json.asConverterFactory("application/json".toMediaType())) mediaType.toMediaType()를 사용하여 해결  
 <br>
+
+
+### ***23.03.13***
+> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기
+> - Retrofit을 사용해서 인터넷에서 데이터 가져오기
+> - kotlinx serialization을 사용해서 Json 파일 직렬화 하기
+> - Coil과 AsyncImage 컴포저블을 사용해서 이미지 로드하기
+> - DI(의존성 주입) 
