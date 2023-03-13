@@ -18,6 +18,7 @@ package com.example.marsphotos.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.Card
@@ -47,7 +48,6 @@ fun HomeScreen(
         is MarsUiState.Success -> PhotosGridScreen(marsUiState.photos, modifier)
         is MarsUiState.Error -> ErrorScreen(modifier)
     }
-
 }
 
 @Composable

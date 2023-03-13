@@ -85,6 +85,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
     debugImplementation "androidx.compose.ui:ui-tooling"
 
+    // 단위 테스트
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
+
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     // Retrofit with Scalar Converter
@@ -92,11 +96,6 @@ dependencies {
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
     // Kotlin 프로젝트에 JSON 직렬화를 해주는 기능
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
-
-    // 단위 테스트
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
-
     // Coil 이미지 로딩 라이브러리
     implementation "io.coil-kt:coil-compose:2.2.2"
 }
