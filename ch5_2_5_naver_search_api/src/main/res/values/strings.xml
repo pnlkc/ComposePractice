@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Naver Image Search</string>
+    <string name="outline_text_field_hint">검색어를 입력하세요</string>
+    <string name="loading">로딩 중</string>
+    <string name="loading_failed">로딩 실패</string>
+</resources>

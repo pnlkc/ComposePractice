@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.ch5_2_4_amphibians'
+    namespace 'com.example.ch5_2_5_naver_search_api'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.ch5_2_4_amphibians"
+        applicationId "com.example.ch5_2_5_naver_search_api"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -52,7 +52,7 @@ dependencies {
     implementation platform('androidx.compose:compose-bom:2023.01.00')
 
     implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.0'
     implementation 'androidx.activity:activity-compose:1.6.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -75,5 +75,7 @@ dependencies {
     // Coil 이미지 로딩 라이브러리
     implementation "io.coil-kt:coil-compose:2.2.2"
     // import androidx.lifecycle.viewmodel.compose.viewModel 사용하기 위해 필요
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0"
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 }

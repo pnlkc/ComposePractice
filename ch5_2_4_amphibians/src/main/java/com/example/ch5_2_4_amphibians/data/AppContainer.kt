@@ -6,7 +6,6 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
-import retrofit2.create
 
 interface AppContainer {
     val amphibiansRepository: AmphibiansRepository
@@ -17,8 +16,8 @@ class DefaultAppContainer : AppContainer {
 
     @OptIn(ExperimentalSerializationApi::class)
     private val retrofit = Retrofit.Builder()
-        .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
         .baseUrl(BASE_URL)
+        .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
         .build()
 
     private val retrofitService: AmphibiansApiService by lazy {
