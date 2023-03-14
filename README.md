@@ -208,11 +208,23 @@
 > 해결방법 : addConverterFactory(Json.asConverterFactory("application/json".toMediaType())) mediaType.toMediaType()를 사용하여 해결  
 <br>
 
-
 ### ***23.03.13***
-> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기
+> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기1
 > 1. Retrofit을 사용해서 인터넷에서 데이터 가져오기
 > 2. kotlinx serialization을 사용해서 Json 파일 직렬화 하기
 > 3. Coil과 AsyncImage 컴포저블을 사용해서 이미지 로드하기
 > 4. DI(의존성 주입)
+<br>
+
+
+### ***23.03.14***
+> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기2
+> 1. Naver Search Api를 활용하여 네이버 이미지 검색 기능 구현
+> 2. 레이아웃을 LazyVerticalStaggeredGrid를 사용하여 구성
+> 3. kotlinx serialization을 사용해서 Json 파일 직렬화 하기
+> 4. Coil과 AsyncImage 컴포저블을 사용해서 이미지 로드하기
+
+> - 학습도중 생긴 문제 
+> 검색어 쿼리를 입력하고 검색을 하려고 하면 `No valid NAT64 prefix` 에러가 발생하면서 앱이 팅김
+> 원인 : kotlinx serialization은 Gson과 달리 Data Class에 Json 응답의 필드를 모두 만들어야 함 (예를 들어 Json에 name, email, address 필드가 있으면 data class에 name, email, address 변수가 있어야 함)
 <br>
