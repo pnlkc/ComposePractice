@@ -1,0 +1,128 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.sqldemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:5:5-30:19
+12        android:allowBackup="true"
+12-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.8.0] D:\Android\.gradle\caches\transforms-3\2c0ac786d5941dc85ca4b4716ba0584a\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+14        android:dataExtractionRules="@xml/data_extraction_rules"
+14-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:7:9-65
+15        android:debuggable="true"
+16        android:fullBackupContent="@xml/backup_rules"
+16-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:8:9-54
+17        android:icon="@mipmap/ic_launcher"
+17-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:9:9-43
+18        android:label="@string/app_name"
+18-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:10:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:11:9-54
+20        android:supportsRtl="true"
+20-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:12:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.SQLDemo" >
+22-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:13:9-45
+23        <activity
+23-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:15:9-29:20
+24            android:name="com.example.sqldemo.MainActivity"
+24-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:16:13-41
+25            android:exported="true"
+25-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:17:13-36
+26            android:label="@string/app_name"
+26-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:18:13-45
+27            android:theme="@style/Theme.SQLDemo" >
+27-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:19:13-49
+28            <intent-filter>
+28-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:20:13-24:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:21:17-69
+29-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:21:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:23:17-77
+31-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:23:27-74
+32            </intent-filter>
+33
+34            <meta-data
+34-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:26:13-28:36
+35                android:name="android.app.lib_name"
+35-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:27:17-52
+36                android:value="" />
+36-->D:\AndroidStudioProjects-Kotlin\Compose_Practice\ch6_1_2_sql_basics_app_compose\src\main\AndroidManifest.xml:28:17-33
+37        </activity>
+38        <activity
+38-->[androidx.compose.ui:ui-tooling:1.3.1] D:\Android\.gradle\caches\transforms-3\b41b95b9ef8e99a4a1fe158b8b50cb13\transformed\ui-tooling-1.3.1\AndroidManifest.xml:23:9-25:39
+39            android:name="androidx.compose.ui.tooling.PreviewActivity"
+39-->[androidx.compose.ui:ui-tooling:1.3.1] D:\Android\.gradle\caches\transforms-3\b41b95b9ef8e99a4a1fe158b8b50cb13\transformed\ui-tooling-1.3.1\AndroidManifest.xml:24:13-71
+40            android:exported="true" />
+40-->[androidx.compose.ui:ui-tooling:1.3.1] D:\Android\.gradle\caches\transforms-3\b41b95b9ef8e99a4a1fe158b8b50cb13\transformed\ui-tooling-1.3.1\AndroidManifest.xml:25:13-36
+41        <activity
+41-->[androidx.compose.ui:ui-test-manifest:1.3.1] D:\Android\.gradle\caches\transforms-3\82bd53836fcf586e76ec902e57fe9645\transformed\ui-test-manifest-1.3.1\AndroidManifest.xml:23:9-25:39
+42            android:name="androidx.activity.ComponentActivity"
+42-->[androidx.compose.ui:ui-test-manifest:1.3.1] D:\Android\.gradle\caches\transforms-3\82bd53836fcf586e76ec902e57fe9645\transformed\ui-test-manifest-1.3.1\AndroidManifest.xml:24:13-63
+43            android:exported="true" />
+43-->[androidx.compose.ui:ui-test-manifest:1.3.1] D:\Android\.gradle\caches\transforms-3\82bd53836fcf586e76ec902e57fe9645\transformed\ui-test-manifest-1.3.1\AndroidManifest.xml:25:13-36
+44
+45        <service
+45-->[androidx.room:room-runtime:2.4.3] D:\Android\.gradle\caches\transforms-3\aaf1cf73e875c3e11d99df1fd06574f2\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+46            android:name="androidx.room.MultiInstanceInvalidationService"
+46-->[androidx.room:room-runtime:2.4.3] D:\Android\.gradle\caches\transforms-3\aaf1cf73e875c3e11d99df1fd06574f2\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
+47            android:directBootAware="true"
+47-->[androidx.room:room-runtime:2.4.3] D:\Android\.gradle\caches\transforms-3\aaf1cf73e875c3e11d99df1fd06574f2\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+48            android:exported="false" />
+48-->[androidx.room:room-runtime:2.4.3] D:\Android\.gradle\caches\transforms-3\aaf1cf73e875c3e11d99df1fd06574f2\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+49
+50        <provider
+50-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:25:9-33:20
+51            android:name="androidx.startup.InitializationProvider"
+51-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:26:13-67
+52            android:authorities="com.example.sqldemo.androidx-startup"
+52-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:27:13-68
+53            android:exported="false" >
+53-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:28:13-37
+54            <meta-data
+54-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+55                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+55-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+56                android:value="androidx.startup" />
+56-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+57        </provider>
+58
+59        <receiver
+59-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+60            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+60-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+61            android:directBootAware="false"
+61-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+62            android:enabled="true"
+62-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+63            android:exported="true"
+63-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+64            android:permission="android.permission.DUMP" >
+64-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+65            <intent-filter>
+65-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+66                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+66-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+66-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+67            </intent-filter>
+68            <intent-filter>
+68-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+69                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+69-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+69-->[androidx.profileinstaller:profileinstaller:1.2.0] D:\Android\.gradle\caches\transforms-3\2f0b27db33a6f3d894559ab312a48d32\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+70            </intent-filter>
+71        </receiver>
+72    </application>
+73
+74</manifest>
