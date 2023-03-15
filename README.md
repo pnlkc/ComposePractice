@@ -216,7 +216,6 @@
 > 4. DI(의존성 주입)
 <br>
 
-
 ### ***23.03.14***
 > - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기2
 > 1. Naver Search Api를 활용하여 네이버 이미지 검색 기능 구현
@@ -227,4 +226,14 @@
 > - 학습도중 생긴 문제 
 > 검색어 쿼리를 입력하고 검색을 하려고 하면 `No valid NAT64 prefix` 에러가 발생하면서 앱이 팅김
 > 원인 : kotlinx serialization은 Gson과 달리 Data Class에 Json 응답의 필드를 모두 만들어야 함 (예를 들어 Json에 name, email, address 필드가 있으면 data class에 name, email, address 변수가 있어야 함)
+<br>
+
+### ***23.03.15***
+> - sql 기본적인 사용법
+> 1. SELECT ~ FROM ~ 문 (COUNT(), SUM(), AVG(), MIN(), MAX())
+> 2. WHERE 절 (AND, OR, LIKE)
+> 3. GROUP BY, ORDER BY, LIMIT
+> 4. INSERT INTO ~ VALUES ~ / UPDATE ~ SET ~ / DELETE FROM ~
+
+> - Flow, StateFlow에 대한 개념
 <br>
