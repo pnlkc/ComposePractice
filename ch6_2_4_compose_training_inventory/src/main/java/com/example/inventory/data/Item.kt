@@ -29,8 +29,7 @@ import androidx.room.PrimaryKey
  * @PrimaryKey는 테이블의 모든 항목을 식별할 수 있는 고유키로 반드시 필요
  * autoGenerate = true로 설정하면 각 항목에 자동으로 고유키가 부여됨
  */
-//@Entity(tableName = "items")
-@Entity
+@Entity(tableName = "items")
 data class Item(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val name: String,
