@@ -237,3 +237,12 @@
 
 > - Flow, StateFlow에 대한 개념
 <br>
+
+### ***23.03.16***
+> - Room Database의 사용법
+> 1. Entity의 역할 및 사용법
+> 2. Dao의 역할 및 사용법
+> 3. Room Database 인스턴스 생성법
+> 4. Room Database에서 Repository를 생성하고 사용하는 방법
+> 5. rememberCoroutineScope()를 통해 컴포저블의 생명주기에 따르는 컴포저블 
+<br>
