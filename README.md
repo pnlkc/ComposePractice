@@ -262,11 +262,11 @@
 > 2. androidTest에서 JUnit을 사용한 테스트는 Activity를 따로 생성하지 않아 UI 테스트보다 빠르게 가능
 > 3. 테스트용 Room 데이터베이스 인스턴스를 만들 때 inMemoryDatabaseBuilder(), allowMainThreadQueries() 사용하여 빠르게 테스트 가능
 
-> - 학습도중 생긴 궁금증1
+> - 학습도중 생긴 궁금증1  
 > 왜 데이터베이스 테스트 중 코루틴 테스트를 할 때 runTest가 아닌 runBlocking을 사용하는 이유는?  
 > 이유 : runTest는 androidTest 소스 디렉토리의 테스트에서는 사용할 수 없음
 
-> - 학습도중 생긴 궁금증2
+> - 학습도중 생긴 궁금증2  
 > ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 deleteItem() suspend fun를 사용하는지 궁금  
 > 이유 : deleteItem()은 아이템 제거 후 화면을 이동하는데 컴포저블에서 코루틴 블럭을 생성하고 suspend fun으로 구현된 deleteItem()을  후 화면 이동을 하는 것이 더 자연스러움
 <br>
