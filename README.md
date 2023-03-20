@@ -246,3 +246,27 @@
 > 4. Room Database에서 Repository를 생성하고 사용하는 방법
 > 5. rememberCoroutineScope()를 통해 컴포저블의 생명주기에 따르는 컴포저블 
 <br>
+
+### ***23.03.20***
+> - Room을 사용하여 데이터 읽기 및 업데이트 (코드랩 6-2-5, inventory)
+> 1. ViewModel에서 Flow를 사용할 때는 StateFlow를 사용하면 UI 수명 주기와 관계없이 값을 관리할 수 있음
+> 2. Flow를 StateFlow로 바꿀 때는 stateIn()을 사용하면 가능
+> 3. stateIn()은 scope, started, initialValue 파라미터를 가짐
+> 4. scope: viewModelScope가 StateFlow의 수명 주기를 정의합니다. viewModelScope가 취소되면 StateFlow도 취소됨
+> 5. started: SharingStarted.WhileSubscribed(TIMEOUT_MILLIS)는 마지막 구독자의 사라짐과 공유 코루틴 중지 사이의 지연(밀리초)을 설정
+> 6. initialValue: StateFlow의 초깃값 
+> 7. 컴포저블에서 StateFlow 값을 collectAsState()를 통해 사용
+
+> - 데이터베이스 테스트 방법
+> 1. 데이터베이스 테스트는 androidTest 소스 디렉토리에서 실행
+> 2. androidTest에서 JUnit을 사용한 테스트는 Activity를 따로 생성하지 않아 UI 테스트보다 빠르게 가능
+> 3. 테스트용 Room 데이터베이스 인스턴스를 만들 때 inMemoryDatabaseBuilder(), allowMainThreadQueries() 사용하여 빠르게 테스트 가능
+
+> - 학습도중 생긴 궁금증1
+> 왜 데이터베이스 테스트 중 코루틴 테스트를 할 때 runTest가 아닌 runBlocking을 사용하는 이유는?  
+> 이유 : runTest는 androidTest 소스 디렉토리의 테스트에서는 사용할 수 없음
+
+> - 학습도중 생긴 궁금증2
+> ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 deleteItem() suspend fun를 사용하는지 궁금  
+> 이유 : deleteItem()은 아이템 제거 후 화면을 이동하는데 컴포저블에서 코루틴 블럭을 생성하고 suspend fun으로 구현된 deleteItem()을  후 화면 이동을 하는 것이 더 자연스러움
+<br>
