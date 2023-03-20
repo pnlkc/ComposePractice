@@ -27,7 +27,7 @@
 <br>
 
 ### ***23.02.23***
-> - 앱 아키텍쳐 - ViewModel에서 앱의 UI 레이어의 상태를 관리하는 방법
+> - 앱 아키텍쳐 - ViewModel에서 앱의 UI 레이어의 상태를 관리하는 방법 (코드랩 4-1-5)
 > - StateFlow라는 옵저버블 데이터 홀더 flow 학습  
   
 > - 궁금증 : StateFlow와 LiveData의 차이점은 무엇인가  
@@ -43,7 +43,7 @@
 <br>
 
 ### ***23.02.24***
-> - Unscramble 앱에 단위 테스트 작성 방법 학습
+> - Unscramble 앱에 단위 테스트 작성 방법 학습 (코드랩 4-1-5)
 > 1) Jumit을 활용한 assert(assertNotEquals, assertEquals, assertTrue, assertFalse 등)
 > 2) 테스트 함수의 이름은 `thingUnderTest_TriggerOfTest_ResultOfTest` 규칙으로 작성하는 것이 좋음
 > 3) 테스트 클래스의 테스트 메소드는 개별적으로 실행되어 각 테스트마다 테스트 클래스의 새로운 인스턴스를 생성 함
@@ -51,7 +51,7 @@
 <br>
 
 ### ***23.02.25***
-> - dessertclicker 앱을 viewmode을 사용하는 앱으로 변경  
+> - dessertclicker 앱을 viewmode을 사용하는 앱으로 변경 (코드랩 4-1-2)
 
 > - 변경 도중 생긴 문제  
 > 1) DessertClickerUiState() 데이터 클래스의 `currentDessertImageId`의 초기값을 0으로 설정해서 앱 실행시 다운 됨  
@@ -61,7 +61,7 @@
 <br>
 
 ### ***23.02.26***
-> - Compose에서 Navigation 사용하는 방법 학습  
+> - Compose에서 Navigation 사용하는 방법 학습  (코드랩 4-2-1)
 
 > - Navigation의 구성요소 3가지
 > 1. NavController: 대상(즉, 앱의 화면) 간 이동을 담당합니다
@@ -77,14 +77,14 @@
 <br>
 
 ### ***23.02.27***
-> - Compose와 Navigation을 사용한 앱 테스트하는 법 학습
+> - Compose와 Navigation을 사용한 앱 테스트하는 법 학습 (코드랩 4-2-1)
 > 1. Compose UI를 테스트 할 때는 테스트 규칙을 생성해서 테스트 한다  
 > ex) @get: Rule val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 > 2. 테스트 코드에서는 일반적인 `NavHostController`를 사용하는 대신 `TestNavHostController`를 사용해야한다
 > 3. `@Before` 주석은 `@Test` 메소드보다 우선해서 실행 된다
 > 4. 반복되는 코드의 경우 확장함수를 사용하여 간결하게 바꿀 수 있다
 
-> - Compose와 Navigation을 이용한 앱 만들기 연습 (Lunch Tray)
+> - Compose와 Navigation을 이용한 앱 만들기 연습 (코드랩 4-2-4)
 > 구글 솔루션 코드와 차이점들
 > 1. `cancel 버튼` 기능을 함수 메소드로 따로 분리
 > 2. AppBar의 타이틀 인자
@@ -92,7 +92,7 @@
 <br>
 
 ### ***23.02.28***
-> - 화면 크기에 따라 달리지는 앱 구현 연습
+> - 화면 크기에 따라 달리지는 앱 구현 연습 (코드랩 4-3-1)
 > 1. Compose에서는 `calculateWindowSizeClass()`를 통해서 화면 크기를 알 수 있음  
 > gradle - dependencies - implementation "androidx.compose.material3:material3-window-size-class:$material_version" 추가 필요
 > 2. 화면 크기는 `Compact`(width : 0-599, height : 0-479), `Medium`(width : 600-839, height : 480-899), `Expanded`(width : 840+, height : 900+)로 나누어짐
@@ -102,7 +102,7 @@
 <br>
 
 ### ***23.03.01***
-> - 화면 크기에 따라 달리지는 앱 구현 연습2
+> - 화면 크기에 따라 달리지는 앱 구현 연습2 (코드랩 4-3-1)
 > 1. Compose 미리보기 화면에서 `@Preview(widthDp = 700)`를 통해 미리보기 화면 크기 조절 가능
 > 2. Composable에 `modifier.testTag(태그)`를 통해 태그를 부여해서 `composeTestRule.onNodeWithTagForStringId(태그).assertExists()`로 테스트 가능
 > 3. Composable의 구성 변경 테스트는 `StateRestorationTester()` 클래스를 사용해서 가능하다 (`stateRestorationTester.emulateSavedInstanceStateRestore()`)
@@ -112,7 +112,7 @@
 <br>
 
 ### ***23.03.02***
-> - 화면 크기에 따라 달리지는 앱 구현 연습3
+> - 화면 크기에 따라 달리지는 앱 구현 연습3 (코드랩 4-3-1)
 > - Sports 앱의 Expanded 화면을 직접 만들어보면서 연습 (구글 Compose 코드랩 4-3-5 과정)
 
 > - 학습 도중 생긴 문제 : Composable 내에서 현재 Activity를 가져오기 위해 `val activity = LocalContext.current as Activity` 를 사용했는데 이 부분이 Composable의 Preview를 빌드할 때 오류가 발생
@@ -141,8 +141,8 @@
 <br>
 
 ### ***23.03.06***
-> - Compose에서 비동기 작업 연습 with Coroutine
-> 1. Composable에서 Coroutine을 실행하려면 LanchedEffect()라는 Composable 안에서 실행해야 됨
+> - Compose에서 비동기 작업 연습 with Coroutine (코드랩 5-1-3)
+> 1. Composable에서 Coroutine을 실행하려면 LaunchedEffect()라는 Composable 안에서 실행해야 됨
 > 2. LaunchedEffect()의 인자인 key값이 변경되면 기본 코루틴이 취소되고 다시 실행 됨
 > 3. coroutineScope 블록은 블록 내부의 모든 코드가 실행이 완료되어야 반환되고 계속 진행됨
 > 4. `public inline fun require(value: Boolean, lazyMessage: () -> Any): Unit`를 사용해서 value가 false면 IllegalArgumentException을 Throw할 수 있음
@@ -152,7 +152,7 @@
 <br>
 
 ### ***23.03.07***
-> - Retrofit2를 사용하여 네트워트와 통신하는 방법 공부
+> - Retrofit2를 사용하여 네트워트와 통신하는 방법 공부 (코드랩 5-1-5)
 > 0. gradle 추가
 > 1. Retrofit.Builder()를 통해 Retrofit 객체를 생성
 > 2. Retrofit 객체에 addConverterFactory()을 통해 JSON Convertor 추가(scalars converter, kotlinx serialization converter 등)  
@@ -163,7 +163,7 @@
 <br>
 
 ### ***23.03.09***
-> - Data Repository를 통해 앱 아키텍쳐 가이드 공부하기
+> - Data Repository를 통해 앱 아키텍쳐 가이드 공부하기 (코드랩 5-1-5)
 > 1. 앱의 다른 레이어가 데이터 소스에 접근할 때는 데이터 Repository를 통해야 함
 > 2. 의존성 주입의 사용 이유와 사용 방법 공부  
 > 의존성 주입을 할 때는 앱에 필요한 의존성 항목들이 포함된 객체인 컨테이너를 만들고  
@@ -191,7 +191,7 @@
 <br>
 
 ### ***23.03.10***
-> - Coil 라이브러리와 AsyncImage 컴포저블을 이용해서 인터넷에서 이미지 로딩하기
+> - Coil 라이브러리와 AsyncImage 컴포저블을 이용해서 인터넷에서 이미지 로딩하기 (코드랩 5-1-5)
 > 0. gradle 추가 - implementation "io.coil-kt:coil-compose:2.2.2"  
 > 1. Compose에서 Coil 라이브러리를 사용해 이미지를 로딩할 때는 AsyncImage 컴포저블을 이용하면 비동기적으로 이미지를 로딩할 수 있음  
 > 2. AsyncImage의 model에 Coil - ImageRequest 객체를 넣어주면 됨
@@ -209,7 +209,7 @@
 <br>
 
 ### ***23.03.13***
-> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기1
+> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기1 (코드랩 5-2-4)
 > 1. Retrofit을 사용해서 인터넷에서 데이터 가져오기
 > 2. kotlinx serialization을 사용해서 Json 파일 직렬화 하기
 > 3. Coil과 AsyncImage 컴포저블을 사용해서 이미지 로드하기
@@ -217,7 +217,7 @@
 <br>
 
 ### ***23.03.14***
-> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기2
+> - 지금까지 배운 인터넷에서 이미지 로드 및 표시 기능 혼자서 구현하기2 (코드랩 5-2-5)
 > 1. Naver Search Api를 활용하여 네이버 이미지 검색 기능 구현
 > 2. 레이아웃을 LazyVerticalStaggeredGrid를 사용하여 구성
 > 3. kotlinx serialization을 사용해서 Json 파일 직렬화 하기
@@ -229,7 +229,7 @@
 <br>
 
 ### ***23.03.15***
-> - sql 기본적인 사용법
+> - sql 기본적인 사용법 (코드랩 6-1-2)
 > 1. SELECT ~ FROM ~ 문 (COUNT(), SUM(), AVG(), MIN(), MAX())
 > 2. WHERE 절 (AND, OR, LIKE)
 > 3. GROUP BY, ORDER BY, LIMIT
@@ -239,7 +239,7 @@
 <br>
 
 ### ***23.03.16***
-> - Room Database의 사용법
+> - Room Database의 사용법 (코드랩 6-2-4)
 > 1. Entity의 역할 및 사용법
 > 2. Dao의 역할 및 사용법
 > 3. Room Database 인스턴스 생성법
