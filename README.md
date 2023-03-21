@@ -270,3 +270,12 @@
 > ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 deleteItem() suspend fun를 사용하는지 궁금  
 > 이유 : deleteItem()은 아이템 제거 후 화면을 이동하는데 컴포저블에서 코루틴 블럭을 생성하고 suspend fun으로 구현된 deleteItem()을  후 화면 이동을 하는 것이 더 자연스러움
 <br>
+
+### ***23.03.21***
+> - Room을 사용한 앱 만들기 (코드랩 6-2-6)
+> 1. Entitiy, DAO, Database 구현
+> 2. DI를 위한 Container, Application 구현
+> 3. createFromAsset() 메소드를 사용해 앱 내부의 Assets 폴더에서 SQLite 데이터베이스 파일을 불러와서 Room 데이터베이스를 생성
+> 4. @ColumnInfo(name = "") 어노테이션을 사용해 필드의 이름을 직접 지정
+<br>
+
