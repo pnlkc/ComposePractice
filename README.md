@@ -289,6 +289,6 @@ ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 del
 6. DataStore 초기화 및 PreferencesRepository에 인스턴스 전달
 
 - 학습도중 생긴 궁금증1  
-코드랩에서 DI를 구현 할 때 Application 클래스와 AppContainer 클래스를 따로 분리하지 않았을지 궁금?  
+코드랩에서 DI를 구현 할 때 Application 클래스와 AppContainer 클래스를 따로 분리하지 않았는지?
 이유 : DI를 구현 할 때 Application 클래스와 AppContainer 클래스를 분리하는 것이 필수는 아님, 하지만 앱이 복잡해질수록 분리하는 것이 좋을 것으로 추측
 <br>
