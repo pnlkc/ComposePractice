@@ -280,7 +280,7 @@ ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 del
 <br>
 
 ### ***23.03.23***
-- Preferences DataStore 사용법 (코드랩 6-3-1)
+- Preferences DataStore 사용법 (코드랩 6-3-3)
 1. gradle에 implementation "androidx.datastore:datastore-preferences:1.0.0" 추가
 2. PreferencesRepository 클래스 생성 (DataStore<Preferences> 타입의 프로퍼티를 생성자로 선언)
 3. PreferencesKey를 싱글턴 객체(companion object)로 생성, ex) booleanPreferencesKey()
