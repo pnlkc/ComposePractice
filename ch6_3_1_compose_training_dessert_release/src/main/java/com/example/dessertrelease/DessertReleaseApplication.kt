@@ -20,18 +20,6 @@ private const val LAYOUT_PREFERENCES_NAME = "layout_preferences"
  * PreferenceDataStoreSingletonDelegate의 getValue()가 override 되어 있습니다.
  * Context.dataStore는 PreferenceDataStoreSingletonDelegate의()의 getValue()를 가져와 사용합니다.
  */
-//private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(
-//    name = LAYOUT_PREFERENCES_NAME
-//)
-//
-//class DessertReleaseApplication: Application() {
-//    lateinit var userPreferencesRepository: UserPreferencesRepository
-//
-//    override fun onCreate() {
-//        super.onCreate()
-//        userPreferencesRepository = UserPreferencesRepository(dataStore)
-//    }
-//}
 
 
 /**
@@ -62,3 +50,17 @@ class DefaultAppContainer(private val context: Context) : AppContainer {
         UserPreferencesRepository(context.dataStore)
     }
 }
+
+//     //코드랩의 작성 코드입니다
+//private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(
+//    name = LAYOUT_PREFERENCES_NAME
+//)
+//
+//class DessertReleaseApplication: Application() {
+//    lateinit var userPreferencesRepository: UserPreferencesRepository
+//
+//    override fun onCreate() {
+//        super.onCreate()
+//        userPreferencesRepository = UserPreferencesRepository(dataStore)
+//    }
+//}

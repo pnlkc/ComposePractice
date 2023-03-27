@@ -31,6 +31,7 @@
             <option value="$PROJECT_DIR$/ch6_2_4_compose_training_inventory" />
             <option value="$PROJECT_DIR$/ch6_2_6_compose_training_bus_schedule" />
             <option value="$PROJECT_DIR$/ch6_3_1_compose_training_dessert_release" />
+            <option value="$PROJECT_DIR$/ch7_1_3_compose_training_workmanager" />
           </set>
         </option>
       </GradleProjectSettings>
