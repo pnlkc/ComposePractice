@@ -292,3 +292,12 @@ ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 del
 코드랩에서 DI를 구현 할 때 Application 클래스와 AppContainer 클래스를 따로 분리하지 않았는지?
 이유 : DI를 구현 할 때 Application 클래스와 AppContainer 클래스를 분리하는 것이 필수는 아님, 하지만 앱이 복잡해질수록 분리하는 것이 좋을 것으로 추측
 <br>
+
+### ***23.03.27***
+- WorkManager 사용법 (코드랩 7-1-3)
+1. gradle에 implementation "androidx.work:work-runtime-ktx:2.8.1" 추가
+2. Worker 클래스 생성
+3. Repository에서 WorkManager 인스턴스 생성
+4. Repository에서 WorkRequest 생성
+5. 생성된 WorkManager 인스턴스로 WorkRequest 예약 및 실행 (필요한 경우 작업 체인 생성 후 실행)
+<br>
