@@ -26,7 +26,7 @@ import kotlinx.coroutines.withContext
  * 모두 인자로 전달해주어야 합니다.
  *
  * makeStatusNotification() 메소드는 WorkerUtils에서 제공되는 메소드로
- * 화면 상단에 배너를 쉽게 표시할 수 있게 해줍니다.
+ * 화면 상단에 알림을 쉽게 표시할 수 있게 해줍니다.
  *
  * androidx.work.ListenableWorker의 Result.success(), Result.failure()를 사용하여
  * 실행 중인 작업 요청의 최종 상태를 나타낼 수 있습니다.
