@@ -20,7 +20,9 @@ import androidx.work.WorkInfo
 import kotlinx.coroutines.flow.Flow
 
 interface BluromaticRepository {
-    val outputWorkInfo: Flow<WorkInfo?>
+    // mapNotNull()로 null 처리를 해주었기 때문에 ? 삭제
+//    val outputWorkInfo: Flow<WorkInfo?>
+    val outputWorkInfo: Flow<WorkInfo>
     fun applyBlur(blurLevel: Int)
     fun cancelWork()
 }
