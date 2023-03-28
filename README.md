@@ -294,10 +294,20 @@ ItemDetailsViewModel에서 reduceQuantityByOne()는 viewModelScope.launch로 del
 <br>
 
 ### ***23.03.27***
-- WorkManager 사용법 (코드랩 7-1-3)
+- WorkManager 사용법1 (코드랩 7-1-3)
 1. gradle에 implementation "androidx.work:work-runtime-ktx:2.8.1" 추가
 2. Worker 클래스 생성
 3. Repository에서 WorkManager 인스턴스 생성
 4. Repository에서 WorkRequest 생성
 5. 생성된 WorkManager 인스턴스로 WorkRequest 예약 및 실행 (필요한 경우 작업 체인 생성 후 실행)
+<br>
+
+### ***23.03.28***
+- WorkManager 사용법2 (코드랩 7-1-4)
+1. beginUniqueWork() : 태그가 동일한 작업 체인은 중복 실행을 제한하는 작업 체인
+2. beginUniqueWork()은 ExistingWorkPolicy 값인 REPLACE, KEEP, APPEND, APPEND_OR_REPLACE를 통해 중복시 할 행동을 설정할 수 있음
+3. Constraints.Builder()를 통해 WorkRequest를 실행하기 전에 충족해야 하는 제약 조건을 만들 수 있음
+4. WorkRequestBuilder.setConstraints()를 통해 제약 조건 설정 가능
+5. WorkRequestBuilder.addTag()를 통해 태크 설정 가능
+6. TestListenableWorkerBuilder를 통해 테스트용 Worker를 생성 
 <br>
