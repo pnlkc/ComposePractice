@@ -22,7 +22,7 @@
 
 ### ***23.02.22***
 - Activity의 생명주기 [onCreate(), onStart(), onRestart(), onResume(), onPause(), onStop(), onDestroy()]
-- onDestroy() 후 재생성 되는 경우에도 값을 유지하려면 remember가 아닌 rememberSaveable을 사용해야됨  
+- onDestroy() 후 재생성 되는 경우(구성변경 - 화면회전, 다크모드 전환 등)에도 값을 유지하려면 remember가 아닌 rememberSaveable을 사용해야됨  
 - 구글 dessertclicker 앱으로 연습
 <br>
 
