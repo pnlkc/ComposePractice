@@ -223,7 +223,7 @@ MediaType.get()이 deprecated 되어서 에러가 발생함
 3. kotlinx serialization을 사용해서 Json 파일 직렬화 하기
 4. Coil과 AsyncImage 컴포저블을 사용해서 이미지 로드하기
 
-- 학습도중 생긴 문제 
+- 학습도중 생긴 문제  
 검색어 쿼리를 입력하고 검색을 하려고 하면 `No valid NAT64 prefix` 에러가 발생하면서 앱이 팅김
 원인 : kotlinx serialization은 Gson과 달리 Data Class에 Json 응답의 필드를 모두 만들어야 함 (예를 들어 Json에 name, email, address 필드가 있으면 data class에 name, email, address 변수가 있어야 함)
 <br>
