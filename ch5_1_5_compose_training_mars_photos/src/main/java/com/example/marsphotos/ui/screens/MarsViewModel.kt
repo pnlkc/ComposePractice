@@ -35,7 +35,7 @@ import java.io.IOException
 /*
     아주 간단히 정리하면
     Enum Class는 클래스에 속한 value(값)들이 모두 같은 형태를 가져야 하는데 아래의 경우 처럼
-    Success와 Error가
+    Success와 Error가 다른 형태를 가지는 경우에는 Enum Class를 사용할 수 없음
  */
 sealed interface MarsUiState {
     data class Success(val photos: List<MarsPhoto>) : MarsUiState
