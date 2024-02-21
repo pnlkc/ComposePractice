@@ -44,7 +44,7 @@
 
 ### ***23.02.24***
 - Unscramble 앱에 단위 테스트 작성 방법 학습 (코드랩 4-1-5)
-1) Jumit을 활용한 assert(assertNotEquals, assertEquals, assertTrue, assertFalse 등)
+1) Junit을 활용한 assert(assertNotEquals, assertEquals, assertTrue, assertFalse 등)
 2) 테스트 함수의 이름은 `thingUnderTest_TriggerOfTest_ResultOfTest` 규칙으로 작성하는 것이 좋음
 3) 테스트 클래스의 테스트 메소드는 개별적으로 실행되어 각 테스트마다 테스트 클래스의 새로운 인스턴스를 생성 함
 4) 테스트 코드의 적용 범위(Coverage) 개선 필요 이유 및 방법 학습
