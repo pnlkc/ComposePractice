@@ -55,7 +55,7 @@
 
 - 변경 도중 생긴 문제  
 1) DessertClickerUiState() 데이터 클래스의 `currentDessertImageId`의 초기값을 0으로 설정해서 앱 실행시 다운 됨  
-해결방법 : `currentDessertImageId`의 초기값을 정
+해결방법 : `currentDessertImageId`의 초기값을 유효한 값으로 지정
 <br>
 
 ### ***23.03.02***
