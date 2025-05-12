@@ -55,60 +55,7 @@
 
 - 변경 도중 생긴 문제  
 1) DessertClickerUiState() 데이터 클래스의 `currentDessertImageId`의 초기값을 0으로 설정해서 앱 실행시 다운 됨  
-해결방법 : `currentDessertImageId`의 초기값을 dessertList[0].imageId로 변경
-2) DessertClickerUiState() 데이터 클래스의 `currentDessertPrice`의 초기값을 0으로 설정해서 앱 실행후 첫번째 클릭시 Total Revenue 값이 변하지 않음
-해결방법 : `currentDessertPrice`의 초기값을 dessertList[0].price로 변경
-<br>
-
-### ***23.02.26***
-- Compose에서 Navigation 사용하는 방법 학습  (코드랩 4-2-1)
-
-- Navigation의 구성요소 3가지
-1. NavController: 대상(즉, 앱의 화면) 간 이동을 담당합니다
-2. NavGraph: 이동할 컴포저블 대상을 매핑합니다
-3. NavHost: NavGraph의 현재 대상을 표시하는 컨테이너 역할을 하는 컴포저블입니다
-
-- navHostController는 NavHost 컴포저블과 함께 사용할 추가 기능을 제공하는 NavController 클래스의 서브클래스입니다
-- Intent를 통해 다른 앱으로 이동하는 법 학습
-
-- 학습 도중 생긴 문제
-1) CodeLab의 7번 과정과 실제 코드가 일치하지 않음  
-해결방법 : Github의 완성 코드를 참고하여 수정 (완전히 동일하지는 않게  커스터마이징 함)
-<br>
-
-### ***23.02.27***
-- Compose와 Navigation을 사용한 앱 테스트하는 법 학습 (코드랩 4-2-1)
-1. Compose UI를 테스트 할 때는 테스트 규칙을 생성해서 테스트 한다  
-ex) @get: Rule val composeTestRule = createAndroidComposeRule<ComponentActivity>()
-2. 테스트 코드에서는 일반적인 `NavHostController`를 사용하는 대신 `TestNavHostController`를 사용해야한다
-3. `@Before` 주석은 `@Test` 메소드보다 우선해서 실행 된다
-4. 반복되는 코드의 경우 확장함수를 사용하여 간결하게 바꿀 수 있다
-
-- Compose와 Navigation을 이용한 앱 만들기 연습 (코드랩 4-2-4)
-구글 솔루션 코드와 차이점들
-1. `cancel 버튼` 기능을 함수 메소드로 따로 분리
-2. AppBar의 타이틀 인자
-3. onSelectionChanged 람다의 it을 이름 지정후 
-<br>
-
-### ***23.02.28***
-- 화면 크기에 따라 달리지는 앱 구현 연습 (코드랩 4-3-1)
-1. Compose에서는 `calculateWindowSizeClass()`를 통해서 화면 크기를 알 수 있음  
-gradle - dependencies - implementation "androidx.compose.material3:material3-window-size-class:$material_version" 추가 필요
-2. 화면 크기는 `Compact`(width : 0-599, height : 0-479), `Medium`(width : 600-839, height : 480-899), `Expanded`(width : 840+, height : 900+)로 나누어짐
-
-- `NavHostController` 없이 `If - Else`문으로 간단한 화면 전환 효과구현
-- `AnimatedVisibility()`를 통해 Composable 애니메이션을 포함해서 Visibility 구현 가능
-<br>
-
-### ***23.03.01***
-- 화면 크기에 따라 달리지는 앱 구현 연습2 (코드랩 4-3-1)
-1. Compose 미리보기 화면에서 `@Preview(widthDp = 700)`를 통해 미리보기 화면 크기 조절 가능
-2. Composable에 `modifier.testTag(태그)`를 통해 태그를 부여해서 `composeTestRule.onNodeWithTagForStringId(태그).assertExists()`로 테스트 가능
-3. Composable의 구성 변경 테스트는 `StateRestorationTester()` 클래스를 사용해서 가능하다 (`stateRestorationTester.emulateSavedInstanceStateRestore()`)
-
-- 학습 도중 생긴 문제 : Expanded 화면의 미리보기가 제대로 나오지 않고 Drawer 화면이 가득차게 나오는 현상 발생   
-- 해결방법 : `PermanentNavigationDrawer()`의 `drawerContent`의 `NavigationDrawerContent()`를 `PermanentDrawerSheet()`으로 감싼 뒤 `modifier.width(240.dp)` 값을 
+해결방법 : `currentDessertImageId`의 초기값을 정
 <br>
 
 ### ***23.03.02***
