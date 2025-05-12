@@ -51,7 +51,7 @@
 <br>
 
 ### ***23.02.25***
-- dessertclicker 앱을 viewmode을 사용하는 앱으로 변경 (코드랩 4-1-2)
+- dessertclicker 앱을 viewmodel을 사용하는 앱으로 변경 (코드랩 4-1-2)
 
 - 변경 도중 생긴 문제  
 1) DessertClickerUiState() 데이터 클래스의 `currentDessertImageId`의 초기값을 0으로 설정해서 앱 실행시 다운 됨  
